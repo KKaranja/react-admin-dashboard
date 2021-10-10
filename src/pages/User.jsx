@@ -7,13 +7,16 @@ import {
   LocationSearching,
   Publish,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const User = () => {
   return (
     <Container>
       <UserTitleContainer>
         <UserTitle>Edit User</UserTitle>
-        <UserAddButton>Create</UserAddButton>
+        <Link to='/newUser'>
+          <UserAddButton>Create</UserAddButton>
+        </Link>
       </UserTitleContainer>
       <UserContainer>
         <UserDisplay>
@@ -77,7 +80,7 @@ const User = () => {
               <UserUpdateItem>
                 <UserInfoLabel>Email</UserInfoLabel>
                 <UserUpdateInput
-                  type='text'
+                  type='email'
                   placeholder='isaackimura@gmail.com'
                 />
               </UserUpdateItem>
@@ -181,6 +184,7 @@ const UserDisplayUsername = styled.span`
   font-weight: 600;
 `;
 const UserDisplayUserTitle = styled.span`
+  margin-top: 0.3125rem;
   font-weight: 300;
 `;
 
